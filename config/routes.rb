@@ -1,4 +1,10 @@
 Xander::Application.routes.draw do
+  get "music/index"
+
+  get "music/upload"
+
+  get "music/delete"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
