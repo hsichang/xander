@@ -1,0 +1,35 @@
+body .new_admin_input_container {
+  width: 175px;
+  display: block;
+  margin: 0 auto;
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+body .users_new_user_input_fields_container {
+  margin-bottom: 40px;
+}
+
+input.button,
+.button a,
+.button {
+  margin: auto;
+  text-decoration: none;
+  display: block;
+  height: 40px;
+  background-color: #DBE8FD;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  width: 175px;
+  border: 1px solid black;
+  font-weight: 800;
+}
+
+input.button:hover,
+.button a:hover,
+.button:hover {
+  background-color: yellow;
+}
+

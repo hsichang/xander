@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
 
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,6 +11,7 @@ gem 'oauth', '0.4.7'
 gem 'httparty', '0.10.2'
 gem 'nokogiri', '1.5.9'
 gem 'twilio-ruby', '3.9.0'
+gem 'aws-s3', :require => 'aws/s3'
 
 group :development, :test do
   gem 'pry-rails'

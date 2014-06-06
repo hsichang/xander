@@ -3,6 +3,7 @@ class FrontpageController < ApplicationController
 
   def index
    # @blogs = BlogEntry.all
-    @blog = BlogEntry.last
+   @blog = Post.last
+
   end
 end

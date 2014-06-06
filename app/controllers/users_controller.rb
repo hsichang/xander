@@ -7,14 +7,21 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new
-    @user.username = params[:username]
+    @user.username = params[:user][:username]
+    @user.password = params[:user][:password]
+    @user.email_address = params[:user][:email_address]
+    @user.save!
+
     @user.create_token
     @user.save!
-    UserMailer.welcome_email(@user).deliver
+    UserMailer.new_user_request(@user).deliver
+    # todo: user_mailer is not completely set up to send emails
 
+    redirect_to root_path
   end
 
   def login_with_token
+    # todo: this path has not been set up yet.
     @user = User.find_by_uuid(params[:uuid])
 
     if @user
@@ -35,7 +42,5 @@ class UsersController < ApplicationController
 
   def create_with_token
     @user = User.find(params[:user])
-    @user.
-
   end
 end

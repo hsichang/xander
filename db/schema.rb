@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140606194302) do
+ActiveRecord::Schema.define(:version => 20140606215348) do
 
   create_table "posts", :force => true do |t|
     t.text "billboard_text", :null => false
@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(:version => 20140606194302) do
     t.string   "encrypted_password"
     t.string   "password_hash"
     t.string   "salt"
-    t.string   "login_token",        :null => false
     t.string   "email_address",      :null => false
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.string   "login_token"
   end
 
 end

@@ -14,9 +14,9 @@
 /log/*.log
 /tmp
 
-.DS_Store
-.swp
-.swo
+*.DS_Store
+*.swp
+*.swo
 
 /*.DS_store
 /*.swp

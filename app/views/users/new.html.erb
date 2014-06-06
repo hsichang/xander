@@ -1,0 +1,39 @@
+<div class="admin-header">
+  Admin control panel :: Create a new admin
+</div>
+
+<div class="new_admin_input_container">
+
+  <div class="users_new_user_input_fields_container">
+  <%= form_for :user do |f| %>
+    <div>
+      <%= flash[:message] if flash[:message] %>
+    </div>
+
+    <div>
+      <%= f.label :username %> <br />
+      <%= f.text_field :username %>
+    </div>
+
+    <div>
+      <%= f.label :password %> <br />
+      <%= f.password_field :password %>
+    </div>
+
+    <div>
+      <%= f.label :email_address %> <br />
+      <%= f.text_field :email_address %>
+    </div>
+
+  </div>
+
+  <div class="admin-submit">
+    <%= submit_tag 'SUBMIT', :class => "button" %>
+  </div>
+
+  <% end %>
+  <div class="admin-logout">
+    <%= link_to 'HOME', root_path, :class => "button" %>
+  </div>
+
+</div>

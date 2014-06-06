@@ -62,5 +62,12 @@ module Xander
     # Tells Rails to only partially load the app for Heroku
     config.assets.initialize_on_precompile = false
 
+    # Amazon S3
+    ActionWebService::S3::Base.establish_connection!(
+      :access_key_id      => 'AKIAI2VNYC5D6WASZ2PQ'
+      :secret_access_key  => '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'
+    )
+
+    BUCKET = 'xander_public_audio'
   end
 end
