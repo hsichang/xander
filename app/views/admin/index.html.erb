@@ -1,0 +1,35 @@
+<div class="admin-header">
+  Admin control panel
+</div>
+
+<div class="admin-input">
+  <div class="current-text">
+    Current text:
+  </div>
+
+  <div>
+    <%= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
+    <%= "Empty" if @blog.nil? %>
+  </div>
+
+  <div class="admin-new-text">
+    New text:
+  </div>
+
+  <div>
+    <%= form_tag (blog_path) do %>
+
+    <div>
+      <%= text_area_tag 'billboard_text', nil, :rows => 10, :cols => 39 %>
+    </div>
+
+    <div class="admin-submit">
+      <%= submit_tag 'Update text', :class => "submit-btn" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="admin-logout">
+    <%= link_to 'logout of admin page', logout_path, :class => "logout-btn" %>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="admin-header">
+  Enter credentials to access backdoor
+</div>
+
+<div class="admin-cred-input">
+
+  <%= form_tag(login_path) do %>
+
+    <div class="admin-login-input-error-msg">
+      <%= "Incorrect username or password" if flash[:error] == "auth_fail" %>
+    </div>
+
+    <div class="admin-login-input-error-msg">
+      <%= "You must login with admin credentials in order to render the page you are attempting to access" if flash[:error] == "access_denied" %>
+    </div>
+
+    <div class="admin-login-input">Username: <br /><%= text_field_tag 'username' %></div>
+    <div class="admin-login-input">Password: <br /><%= password_field_tag 'password' %></div>
+</div>
+    <%= submit_tag 'submit', :class => "submit-btn" %>
+  <% end %>
