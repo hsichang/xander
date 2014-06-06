@@ -63,9 +63,9 @@ module Xander
     config.assets.initialize_on_precompile = false
 
     # Amazon S3
-    ActionWebService::S3::Base.establish_connection!(
-      :access_key_id      => 'AKIAI2VNYC5D6WASZ2PQ'
-      :secret_access_key  => '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'
+    AWS::S3::Base.establish_connection!(
+      :access_key_id      => ENV['AWSKEY']
+      :secret_access_key  => ENV['AWSSEC']
     )
 
     BUCKET = 'xander_public_audio'
