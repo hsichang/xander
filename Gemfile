@@ -1,12 +1,39 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.17'
+gem 'rails', '3.2.15'
+
+# Deploy with Capistrano
+# gem 'capistrano'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'oauth', '0.4.7'
+gem 'httparty', '0.10.2'
+gem 'nokogiri', '1.5.9'
+gem 'twilio-ruby', '3.9.0'
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'debugger', '1.6.5'
+  gem 'annotate'
+  gem 'rails-footnotes'
+  gem 'capybara'
+  gem 'rspec-rails'
+end
+
+group :development do
+  # Generally keeping these out of test environment because
+  # they sporadically cause segmentation fault
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,16 +50,10 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
