@@ -64,7 +64,7 @@ module Xander
 
     # Amazon S3
     AWS::S3::Base.establish_connection!(
-      :access_key_id      => ENV['AWSKEY']
+      :access_key_id      => ENV['AWSKEY'],
       :secret_access_key  => ENV['AWSSEC']
     )
 
