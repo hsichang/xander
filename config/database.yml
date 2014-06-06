@@ -1,0 +1,18 @@
+defaults: &defaults
+   adapter: postgresql
+   encoding: unicode
+   pool: 5
+   username: xander
+   password:
+
+development:
+   database: xander_development
+   <<: *defaults
+
+test:
+   database: xander_test
+   <<: *defaults
+
+production:
+   database: xander_production
+   <<: *defaults
