@@ -3,7 +3,7 @@ class FrontpageController < ApplicationController
 
   def index
    # @blogs = BlogEntry.all
-   @blog = Post.last unless Post.last.nil?
+   # @blog = Post.last unless Post.last.nil?
 
 
   end

@@ -44,8 +44,8 @@
               <%#= blog.billboard_text.gsub(/\n/, '<br/>') %>
               <!-- <br /> -->
             <%# end %>
-            <%= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
-            <%= "No upcoming events" if @blog.nil? || @blog.billboard_text.blank? %>
+            <%#= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
+            <%#= "No upcoming events" if @blog.nil? || @blog.billboard_text.blank? %>
           </div>
         </div>
 
