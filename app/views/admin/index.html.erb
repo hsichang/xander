@@ -1,35 +1,49 @@
-<div class="admin-header">
-  Admin control panel
+<div class="admin_header_container">
+  <div class="text-left admin-panel group">
+    <span class="admin_header_text">Administrator control panel</span>
+  </div>
+  <div class="text-right admin-panel admin_panel_button_container group">
+    <%= link_to 'LOGOUT', logout_path, :class => "admin_header_button" %>
+  </div>
+  <div class="clear"></div>
 </div>
 
-<div class="admin-input">
-  <div class="current-text">
-    Current text:
+<div class="admin_body_container">
+
+  <div class="admin_control_panel_flash_message_container">
+    <!-- IF FLASH MAKE A MESSAGE HERE -->
+
   </div>
 
-  <div>
-    <%= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
-    <%= "Empty" if @blog.nil? %>
-  </div>
 
-  <div class="admin-new-text">
-    New text:
-  </div>
-
-  <div>
-    <%= form_tag (blog_path) do %>
-
-    <div>
-      <%= text_area_tag 'billboard_text', nil, :rows => 10, :cols => 39 %>
+  <div class="admin_control_panel_dashboard_container">
+    <div class="admin_control_panel_title_container">
+      <span class="admin_control_panel_text">Frontpage post dashboard</span>
     </div>
-
-    <div class="admin-submit">
-      <%= submit_tag 'Update text', :class => "submit-btn" %>
+    <div class="admin_control_panel_dashboard_controls_container">
+      | + ADD A NEW HEADLINE | + ADD A NEW POST
     </div>
+  </div>
+
+  <div class="admin_dashboard_frontpage">
+   PRIORITY | HEADLINE
+  </div>
+
+  <!-- LOOP FOR EACH TITLE -->
+  <% unless @titles.blank? %>
+    <% @titles.each do |title| %>
+
+      <!-- LOOP FOR EACH POST -->
+      <% title.posts.each do |post| %>
+
+      <% end %>
+
     <% end %>
-  </div>
 
-  <div class="admin-logout">
-    <%= link_to 'logout of admin page', logout_path, :class => "logout-btn" %>
-  </div>
+  <% else %>
+
+    NO TITLES
+
+  <% end %>
+
 </div>

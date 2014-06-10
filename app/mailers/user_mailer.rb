@@ -3,8 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def new_user_request(user)
     @user = user
-    @login_token = user.login_token
-    mail(to: @user.email_address, subject: 'New admin user request for xanderduell.com')
+    mail(:to => 'hsi.chang@gmail.com', :subject => 'New admin user request for xanderduell.com')
   end
 
 end

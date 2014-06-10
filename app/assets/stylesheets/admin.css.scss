@@ -1,0 +1,151 @@
+$admin_header_text: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$admin_header_text_weight: 300;
+$admin_header_background_color: #292929;
+
+.admin_header_container {
+  background-color: $admin_header_background_color;
+  padding: 30px 150px;
+  margin-bottom: 0px;
+  text-align: left;
+  border-bottom: 10px solid white;
+}
+
+.admin_header_text {
+  font-family: $admin_header_text;
+  font-weight: $admin_header_text_weight;
+  width: 100%;
+  color: white;
+  font-size: 32px;
+}
+
+.admin_header_button {
+  background-color: #1A1A1A;
+  border-radius: 5px;
+  text-indent:0;
+  display:inline-block;
+  color:#a8a8a8;
+  font-family:Arial;
+  font-size: 10px;
+  font-weight:normal;
+  font-style:normal;
+  height: 34px;
+  line-height:35px;
+  width: 70px;
+  text-decoration:none;
+  text-align:center;
+}
+
+.admin_panel_button_container {
+  margin-top: 1px;
+}
+
+.admin_header_button:hover {
+  background-color:#100000;
+  cursor: pointer;
+}
+
+.admin_header_button:active {
+  position:relative;
+  top:1px;
+}
+
+.admin_body_container {
+  background-color: #E6E6E6;
+  padding: 40px 150px 500px 150px;
+}
+
+.admin_control_panel_text {
+  font-family: $admin_header_text;
+  font-size: 27px;
+}
+
+
+
+
+
+
+
+
+
+
+/* === OLD === */
+.admin-input {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.admin-cred-input {
+  width: 200px;
+  height: 120px;
+  display: block;
+  margin: 0 auto 30px auto;
+  font-family: "brandon-grotesque",sans-serif;
+  font-size: 18px;
+  border: 1px solid black;
+  font-weight: 400;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.current-text {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.admin-new-text {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.admin-submit {
+  margin-top: 20px;
+}
+
+.admin-logout {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.submit-btn {
+  margin: auto;
+  text-decoration: none;
+  display: block;
+  height: 40px;
+  background-color: #DBE8FD;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  width: 130px;
+  border: 1px solid black;
+  font-weight: 800;
+}
+
+.submit-btn:hover {
+  background-color: yellow;
+}
+
+.logout-btn {
+  text-decoration: none;
+  display: block;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: yellow;
+  color: black;
+  border: 1px solid black;
+}
+
+

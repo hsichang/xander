@@ -1,0 +1,91 @@
+
+/* ==== */
+/* this actually belongs to a more top level css place. */
+body {
+  margin: 0px;
+}
+
+.wrapper {
+  width: 1670px;
+}
+
+#wrapper_nav {
+  color: #ffffff;
+  background-color: #ffffff;
+  min-height: 86px;
+}
+
+#container {
+  background-color: #2f2f2f;
+  max-height: 820px;
+  padding: 44px 0 40px 0;
+}
+
+/* ==== */
+
+
+.front_page_container {
+  width: 335px !important;
+  float: left;
+  color: #cacaca;
+  font-family: "brandon-grotesque",sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: -3px 20px 0 0;
+}
+.frontpage_posts {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.frontpage_title_container {
+  margin-bottom: 20px;
+}
+
+.frontpage_title_container.titles_empty_container {
+  margin-top: 160px;
+}
+
+.frontpage_title_text {
+  font-family: "brandon-grotesque", sans-serif;
+  color: #00ffd0;
+  font-size: .9em;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.frontpage_post_body_container {
+  margin-bottom: 20px;
+}
+
+.frontpage_post_body_text {
+  font-size: .9em;
+}
+
+.titles_empty_post_body_text {
+  font-size: 16px;
+}
+
+.frontpage_post_body_text a {
+  font-family: "brandon-grotesque",sans-serif;
+  color: #00ffd0;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.frontpage_post_body_text a:hover {
+  font-family: "brandon-grotesque",sans-serif;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+
+.contact_text_container {
+  position: absolute;
+  top: 836px;
+}
+

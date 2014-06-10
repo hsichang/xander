@@ -11,10 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140606215348) do
+ActiveRecord::Schema.define(:version => 20140609234055) do
 
   create_table "posts", :force => true do |t|
-    t.text "billboard_text", :null => false
+    t.text    "body",                        :null => false
+    t.integer "title_id"
+    t.integer "order",    :default => 100,   :null => false
+    t.boolean "visible",  :default => true,  :null => false
+    t.boolean "deleted",  :default => false, :null => false
+  end
+
+  create_table "titles", :force => true do |t|
+    t.string   "name",                          :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "order",      :default => 100,   :null => false
+    t.boolean  "visible",    :default => true,  :null => false
+    t.boolean  "deleted",    :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -26,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20140606215348) do
     t.string   "email_address",      :null => false
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-    t.string   "login_token"
+    t.string   "uuid"
   end
 
 end

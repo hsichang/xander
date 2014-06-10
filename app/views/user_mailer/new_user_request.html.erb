@@ -10,11 +10,7 @@
         <h1>New user request for xanderduell.com</h1>
       </p>
       <p>
-        <%= @email_address %> would like admin_credentials.
-      </p>
-      <p>
-        To verify, please send them this uuid:
-        <%= @user.login_token %>
+        <%= @user.username %> at <%= @user.email_address %> would like admin_credentials.
       </p>
     </div>
 

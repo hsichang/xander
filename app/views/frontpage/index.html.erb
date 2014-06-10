@@ -35,21 +35,42 @@
           <span class="highlight">Xander Duell.</span> Composer. Performer.
         </div>
 
-        <div class="upcoming_events">
-          <div class="front_text">
-            <span class="highlight"><u>Upcoming Events</u></span>
-          </div>
-          <div class="front_text">
-            <%# @blogs.each do |blog| %>
-              <%#= blog.billboard_text.gsub(/\n/, '<br/>') %>
-              <!-- <br /> -->
-            <%# end %>
-            <%#= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
-            <%#= "No upcoming events" if @blog.nil? || @blog.billboard_text.blank? %>
-          </div>
-        </div>
+        <!-- change this from .upcoming_events to frontpage_posts -->
+        <% unless @titles.blank? %>
+          <% @titles.each do |title| %>
+            <div class="frontpage_posts">
 
-        <div class="front_text contact_text">
+              <div class="frontpage_title_container">
+                <span class="frontpage_title_text"><%= title %></span>
+              </div>
+
+              <% title.published_posts.each do |post| %>
+                <div class="frontpage_post_body_container">
+                  <span class="frontpage_post_body_text">
+                    <%= post.body %>
+                  </span>
+                </div><!-- .frontpage_post_body_container -->
+              <% end %>
+                <!-- post title -->
+
+                <!-- loop for each title post -->
+
+                <!-- loop through and post each post that is published -->
+
+
+
+
+            </div><!-- .frontpage_posts -->
+          <% end %> <!-- @titles loop -->
+        <% else %>
+          <div class="frontpage_title_container titles_empty_container">
+            <span class="frontpage_post_text"><span class="titles_empty_post_body_text highlight_text">Come back soon</span>, news, tour dates and more are on their way.</span>
+          </div>
+        <% end %>
+
+
+
+        <div class="frontpage_post_body_text contact_text_container">
           contact: <a href="mailto:xanderduell@gmail.com" target="_top">xanderduell@gmail.com</a>
         </div>
       </div>
@@ -311,7 +332,7 @@ It’s going to take more than the space provided here to sum up the ideas and t
     </div><!-- #container -->
 
     <footer>
-        <span class="footer-highlight">COPYRIGHT 2013.</span>
+        <span class="footer-highlight">COPYRIGHT 2013. XANDERDUELL.COM</span>
     </footer>
 </div><!-- #wrapper -->
 

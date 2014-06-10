@@ -1,15 +1,28 @@
 Xander::Application.routes.draw do
-  get "music/index"
+  get "titles/new"
 
-  get "music/upload"
+  get "titles/show"
 
-  get "music/delete"
+  get "titles/edit"
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  get "titles/create"
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  get "titles/update"
+
+  get "titles/destroy"
+
+  get "posts/new"
+
+  get "posts/show"
+
+  get "posts/edit"
+
+  get "posts/create"
+
+  get "posts/update"
+
+  get "posts/destroy"
+
   root :to => 'frontpage#index'
 
   get '/' => 'frontpage#index'
@@ -23,9 +36,25 @@ Xander::Application.routes.draw do
   get '/admin' => 'admin#index'
   post '/blog' => 'admin#update'
 
+  get '/new_headline' => 'admin#headline_new'
+  get '/headline/:id/edit' => 'admin#headline_update'
+  post '/new_headline' => 'admin#submit_headline_new'
+
+  get '/post/:id' => 'post#show'
+  get '/new_post' => 'post#new'
+  get '/post/:id/edit' => 'post#edit'
+  post '/new_post' => 'post#create'
+
   # create new user
   get '/create_new_admin' => 'users#new'
   post '/create_new_admin' => 'users#create'
+
+  # music app
+  get "music/index"
+
+  get "music/upload"
+
+  get "music/delete"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

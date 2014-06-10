@@ -11,7 +11,7 @@
 #  email_address      :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
-#  login_token        :string(255)
+#  uuid               :string(255)
 #
 
 require 'bcrypt'
