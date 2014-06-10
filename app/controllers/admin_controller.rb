@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   before_filter :deny_access, :unless => :draft_and_admin?
 
   def index
-    @blog = Post.last
+    @titles = Title.all
   end
 
   def update
@@ -17,6 +17,16 @@ class AdminController < ApplicationController
   end
 
   def login
+
+  end
+
+  def new_headline
+
+
+  end
+
+  def new_post
+
 
   end
 
