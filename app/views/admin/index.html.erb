@@ -15,6 +15,15 @@
 
   </div>
 
+  <% if this_user.active_superuser? %>
+    <div class="admin_control_panel_superuser_dashboard_container">
+
+"hello i am an active superuser"
+
+
+    </div>
+  <% end %>
+
 
   <div class="admin_control_panel_dashboard_container">
     <div class="admin_control_panel_title_container">

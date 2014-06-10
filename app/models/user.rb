@@ -2,16 +2,15 @@
 #
 # Table name: users
 #
-#  id                 :integer          not null, primary key
-#  username           :string(255)      not null
-#  password           :string(255)
-#  encrypted_password :string(255)
-#  password_hash      :string(255)
-#  salt               :string(255)
-#  email_address      :string(255)      not null
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  uuid               :string(255)
+#  id            :integer          not null, primary key
+#  username      :string(255)      not null
+#  password_hash :string(255)
+#  email_address :string(255)      not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  uuid          :string(255)
+#  superuser     :boolean          default(FALSE), not null
+#  active        :boolean          default(FALSE), not null
 #
 
 require 'bcrypt'
@@ -19,24 +18,44 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
-  before_save :encrypt_password
-  after_save :clear_password
+  before_save :create_uuid
 
   attr_accessible :password,
                   :username,
-                  :salt,
                   :encrypted_password,
                   :password_hash,
                   :login_token
+                  :email_address
+                  :uuid
+                  :superuser
+                  :active
+  attr_reader     :password
 
-  def encrypt_password
-    if password.present?
-      self.salt = BCrypt::Engine.generate_salt
-      self.encrypted_password= BCrypt::Engine.hash_secret(password, salt)
+  validate :password_not_blank
+  validate :username_not_blank
+  validate :username_is_not_reserved
+
+  def password_not_blank
+    return if self.password.nil?
+
+    if self.password.blank?
+      errors.add(:password, "Password can not be blank")
     end
   end
 
-=begin
+  def username_is_not_reserved
+    return unless %w[ root superuser admin webmaster justworks customersupport sysop support ].include?(self.username)
+    errors.add(:username, "is invalid")
+  end
+
+  def username_not_blank
+    return if self.username.nil?
+
+    if self.username.blank?
+      errors.add(:username, "Usernname can not be blank")
+    end
+  end
+
   def password
     @password ||= Password.new(password_hash)
   end
@@ -45,19 +64,17 @@ class User < ActiveRecord::Base
     @password = Password.create(new_password)
     self.password_hash = @password
   end
-=end
 
-  def clear_password
-    self.password = nil
+  def create_uuid
+     self.uuid ||= SecureRandom.uuid
   end
 
-  def self.authenticate(user, password)
-    return true if user.encrypted_password == BCrypt::Engine.hash_secret(password, user.salt)
-    false
+  def active_admin?
+    self.active == true
   end
 
-  def create_token
-     self.login_token ||= SecureRandom.uuid
+  def superuser?
+    self.superuser == true && self.active_admin?
   end
 
 end

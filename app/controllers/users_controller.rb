@@ -8,15 +8,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new
     @user.username = params[:user][:username]
-    @user.password = params[:user][:password]
+    @user.password = params[:password]
     @user.email_address = params[:user][:email_address]
-    @user.save!
-
-    @user.create_token
     @user.save!
 
     UserMailer.new_user_request(@user).deliver
 
+    # TODO - redirect to a page that says you will be waiting for admin approval
     redirect_to root_path
   end
 
@@ -24,7 +22,4 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def create_with_token
-    @user = User.find(params[:user])
-  end
 end

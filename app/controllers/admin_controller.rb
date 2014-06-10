@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
-  before_filter :deny_access, :unless => :draft_and_admin?
+  before_filter :deny_access, :unless => :admin?
+  before_filter :deny_access, :unless => :superuser?
 
   def index
     @titles = Title.all
@@ -13,10 +14,6 @@ class AdminController < ApplicationController
   end
 
   def show
-
-  end
-
-  def login
 
   end
 
@@ -36,7 +33,11 @@ class AdminController < ApplicationController
     redirect_to login_path, :flash => { :error => "access_denied"}
   end
 
-  def draft_and_admin?
-    session[:admin] == true
+  def admin?
+    this_user.active_admin?
+  end
+
+  def active_superuser?
+    this_user.active_superuser?
   end
 end

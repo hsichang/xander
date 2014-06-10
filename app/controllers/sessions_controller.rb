@@ -7,11 +7,10 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by_username(params[:username].downcase)
-    if @user
-      authenticated = User.authenticate(@user, params[:password])
-    end
-    if authenticated
-      session[:admin] = true
+
+    if @user.password == params[:password] && @user.active_admin?
+      give_token
+    else
       redirect_to admin_path and return
     end
 
@@ -19,6 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def auth_fail
+    # TODO make a page for users trying to break in
 
   end
 

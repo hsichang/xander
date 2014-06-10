@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140609234055) do
+ActiveRecord::Schema.define(:version => 20140610041033) do
 
   create_table "posts", :force => true do |t|
     t.text    "body",                        :null => false
@@ -31,15 +31,16 @@ ActiveRecord::Schema.define(:version => 20140609234055) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",           :null => false
-    t.string   "password"
-    t.string   "encrypted_password"
+    t.string   "username",                         :null => false
     t.string   "password_hash"
-    t.string   "salt"
-    t.string   "email_address",      :null => false
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.string   "email_address",                    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "uuid"
+    t.boolean  "superuser",     :default => false, :null => false
+    t.boolean  "active",        :default => false, :null => false
   end
+
+  add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
 end
