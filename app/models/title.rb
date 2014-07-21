@@ -28,6 +28,10 @@ class Title < ActiveRecord::Base
 
   has_many :posts
 
+  validates :name, presence: true
+  validates :order, presence: true
+  validates :order, numericality: true
+
   def published_posts
     self.posts.published
   end

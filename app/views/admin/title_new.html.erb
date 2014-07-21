@@ -1,0 +1,50 @@
+<div class="admin_header_container">
+  <div class="text_left admin-panel group">
+    <span class="admin_header_text">Administrator control panel</span>
+  </div>
+  <div class="text_right admin-panel admin_panel_button_container group">
+    <%= link_to 'LOGOUT', logout_path, :class => "admin_header_button" %>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<div class="admin_body_container">
+
+  <div class="admin_control_panel_flash_message_container">
+    <!-- IF FLASH MAKE A MESSAGE HERE -->
+
+  </div>
+
+  <div class="admin_control_panel_dashboard_container">
+   <div class="admin_control_panel_title_container">
+      <span class="admin_control_panel_text">Add a new headline</span>
+    </div>
+  </div>
+
+  <div class="admin_control_panel_form_container">
+    <%= form_for @title, url: title_new_path(@title) do |t| %>
+
+      <div class="admin_form_field_container">
+        <%= t.label :name %>
+        <%= t.text_field :name %>
+      </div>
+
+      <div class="admin_form_field_container">
+        <%= t.label :order, "Priority" %>
+        <%= t.number_field :order %>
+      </div>
+
+      <div class="admin_form_field_container">
+        <%= t.label :visible %>
+        <%= t.check_box :visible %>
+      </div>
+
+      <%= t.submit "SUBMIT NEW TITLE" %>
+    <% end %>
+
+
+  </div>
+
+</div>
+
+

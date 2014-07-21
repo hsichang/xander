@@ -9,4 +9,5 @@ module ApplicationHelper
 
     @this_user ||= User.find(this_user_id)
   end
+
 end

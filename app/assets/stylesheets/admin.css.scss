@@ -1,6 +1,11 @@
 $admin_header_text: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$admin_header_text_color: #FAFAFA;
 $admin_header_text_weight: 300;
 $admin_header_background_color: #292929;
+
+.admin-panel {
+  width: 50%;
+}
 
 .admin_header_container {
   background-color: $admin_header_background_color;
@@ -56,10 +61,9 @@ $admin_header_background_color: #292929;
 
 .admin_control_panel_text {
   font-family: $admin_header_text;
+  color: $admin_header_text_color;
   font-size: 27px;
 }
-
-
 
 
 
@@ -148,4 +152,35 @@ $admin_header_background_color: #292929;
   border: 1px solid black;
 }
 
+.admin_control_panel_title_container {
+  background-color: $admin_header_background_color;
+  width: 870px;
+  border-radius: 5px;
+  padding: 10px 15px;;
+  margin: 20px 0;
+}
 
+.admin_control_panel_options_text {
+  color: $admin_header_text_color;
+  font-family: $admin_header_text;
+  position: relative;
+  top: 8px;
+  left: 15px;
+}
+
+.admin_control_panel_options_text a,
+.admin_control_panel_options_text a:visited {
+  color: #5C7440;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.admin_control_panel_options_text a:hover {
+  color: #FAFAFA;
+}
+
+.admin_form_field_container {
+  margin: 0 0 20px 0;
+  display: block;
+}

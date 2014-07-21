@@ -41,7 +41,7 @@
             <div class="frontpage_posts">
 
               <div class="frontpage_title_container">
-                <span class="frontpage_title_text"><%= title.name %></span>
+                <span class="frontpage_title_text"><%= title %></span>
               </div>
 
               <% title.published_posts.each do |post| %>
@@ -79,8 +79,7 @@
         <div id="listen_container" class = "front_page_container2">
 
 
-          <iframe wdth="100%" height="450" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155644495&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
+          <iframe wdth="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155644495&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
           <!--
 
@@ -168,6 +167,39 @@
           <div id="shade" class="dark">&nbsp;</div>
           <div id="listen-audio-player" class="dark-text">
             <!-- AUDIO PLAYER -->
+            <div id="experimental_tape_row" class="audio-player-wrapper">
+              <div class="left cover">
+                <img src="./assets/cover_waide.jpg" height="60" width="60">
+              </div>
+              <div class="right">
+                <div class="player_songTitle playerPadding">"Beat Boxes"</div>
+                <div class="player_albumTitle playerPadding">WADE LAISTE</div>
+                <div class="player_labelTitle playerPadding"></div>
+                <div id="audioplayer" class="listen_text">
+                  <div class="song-player song1-player ">
+                    <audio src="./assets/beat_boxes_remix.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song2-player">
+                    <audio src="./assets/santori.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song3-player ">
+                    <audio src="./assets/endure.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song4-player ">
+                    <audio src="./assets/emma_baby.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song5-player ">
+                    <audio src="./assets/x.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song6-player ">
+                    <audio src="./assets/live_n_learn.mp3" preload="none" />
+                  </div>
+                  <div class="song-player song7-player ">
+                    <audio src="./assets/joy.mp3" preload="none" />
+                  </div>
+                </div><!-- #audioplayer -->
+              </div><!-- .right -->
+            </div><!-- .experimental_tape_row -->
             <div class="listen-song-text">
               <span class="experimental_text">
                 <p>

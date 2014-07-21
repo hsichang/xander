@@ -1,4 +1,9 @@
 /* TODO: Redo all sizes to ems */
+
+.soundHeader {
+  display: none;
+}
+
 footer {
   background-color: #ffffff;
   min-height: 110px;
@@ -97,17 +102,6 @@ footer {
   float: left;
   margin: 0 20px 0 0;
   display: none;
-}
-
-.title {
-  width: 294px;
-  height: 36px;
-  display: block;
-
-  padding: 8px 0 0 338px;
-  color: black;
-  float:left;
-  margin: 0 162px 0 0;
 }
 
 .menu {
@@ -212,14 +206,14 @@ h3 {
 /*LISTEN PAGE*/
 
 .listen-song-text {
-  margin-left: 60px;
-  margin-top: 40px;
+  margin-left: 0px;
+  margin-top: -30px;
   font-size: .9em;
-
   font-family: "brandon-grotesque",sans-serif;
   color: #cacaca;
   font-weight: 200;
   font-style: italic;
+  padding: 20px;
 }
 
 .experimental_text {

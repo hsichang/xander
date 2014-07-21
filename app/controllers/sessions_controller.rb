@@ -8,13 +8,21 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by_username(params[:username].downcase)
 
-    if @user.password == params[:password] && @user.active_admin?
-      give_token
+    if !@user.nil? && @user.password == params[:password]
+      session[:user_id] = @user.id
+      session[:admin] = true
+      redirect_to admin_path# if @user.superuser
+      # TODO: redirect somewhere if they are in active admin
+      #
+      # TODO: make a special false clause for inactive members
+      #
+      # redirect somewhere else if we decide to have non admin routes
+      # in the future
     else
-      redirect_to admin_path and return
+      redirect_to login_path, :flash => { :error => "auth_fail" } and return
     end
 
-    redirect_to login_path, :flash => { :error => "auth_fail" }
+
   end
 
   def auth_fail
@@ -23,7 +31,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:admin] = false
+   session[:user_id] = nil
+    reset_session
     redirect_to root_path
   end
 

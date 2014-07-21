@@ -24,14 +24,15 @@ class User < ActiveRecord::Base
                   :username,
                   :encrypted_password,
                   :password_hash,
-                  :login_token
-                  :email_address
-                  :uuid
-                  :superuser
+                  :login_token,
+                  :email_address,
+                  :uuid,
+                  :superuser,
                   :active
   attr_reader     :password
-
+=begin
   validate :password_not_blank
+=end
   validate :username_not_blank
   validate :username_is_not_reserved
 
@@ -69,12 +70,8 @@ class User < ActiveRecord::Base
      self.uuid ||= SecureRandom.uuid
   end
 
-  def active_admin?
-    self.active == true
-  end
-
-  def superuser?
-    self.superuser == true && self.active_admin?
+  def active_superuser?
+    self.active && self.superuser
   end
 
 end

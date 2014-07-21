@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new
     @user.username = params[:user][:username]
-    @user.password = params[:password]
+    @user.password = params[:user][:password]
     @user.email_address = params[:user][:email_address]
     @user.save!
 

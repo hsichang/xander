@@ -1,8 +1,8 @@
 <div class="admin_header_container">
-  <div class="text-left admin-panel group">
+  <div class="text_left admin-panel group">
     <span class="admin_header_text">Administrator control panel</span>
   </div>
-  <div class="text-right admin-panel admin_panel_button_container group">
+  <div class="text_right admin-panel admin_panel_button_container group">
     <%= link_to 'LOGOUT', logout_path, :class => "admin_header_button" %>
   </div>
   <div class="clear"></div>
@@ -15,10 +15,10 @@
 
   </div>
 
-  <% if this_user.active_superuser? %>
+  <% if this_user.superuser? %>
     <div class="admin_control_panel_superuser_dashboard_container">
 
-"hello i am an active superuser"
+      <!--  "hello i am an active superuser" -->
 
 
     </div>
@@ -27,32 +27,42 @@
 
   <div class="admin_control_panel_dashboard_container">
     <div class="admin_control_panel_title_container">
-      <span class="admin_control_panel_text">Frontpage post dashboard</span>
+      <span class="admin_control_panel_text group">Frontpage post dashboard</span>
+      <span class="admin_control_panel_options_text group">
+        |
+        <%= link_to "ADD A NEW HEADLINE", title_new_path %>
+        |
+        <!-- change this to post not posts and move the views -->
+        <%= link_to "ADD A NEW POST", post_new_path %>
+      </span>
+      <div class="clear"></div>
     </div>
-    <div class="admin_control_panel_dashboard_controls_container">
-      | + ADD A NEW HEADLINE | + ADD A NEW POST
+
+
+    <div class="admin_dashboard_frontpage">
+     PRIORITY | HEADLINE
     </div>
-  </div>
 
-  <div class="admin_dashboard_frontpage">
-   PRIORITY | HEADLINE
-  </div>
+    <!-- LOOP FOR EACH TITLE -->
+    <% unless @titles.blank? %>
+      <% @titles.each do |title| %>
+        <div class="title_name"><%= title.name %></title>
+        <div class="admin_new_post_prompt"><%= link_to "Add a new sub post", post_new_path, :title_id => title.id %></div>
+        <!-- LOOP FOR EACH POST -->
+        <% title.posts.each do |post| %>
 
-  <!-- LOOP FOR EACH TITLE -->
-  <% unless @titles.blank? %>
-    <% @titles.each do |title| %>
 
-      <!-- LOOP FOR EACH POST -->
-      <% title.posts.each do |post| %>
+        <% end %>
 
       <% end %>
 
+    <% else %>
+
+      NO TITLES
+
     <% end %>
 
-  <% else %>
+  </div>
 
-    NO TITLES
-
-  <% end %>
 
 </div>
