@@ -30,6 +30,18 @@ footer {
   float: left;
 }
 
+.axis-cover-container {
+  margin-top: 12px;
+}
+
+.axis-cover {
+  display: block;
+  width: 325px;
+  height: 470px;
+  background-color #000;
+  background: url('axis-cover.png');
+}
+
 .image-1 {
   width: 304px !important;
   height: 722px !important;
@@ -227,10 +239,14 @@ h3 {
 .dark4 {
     display: none;
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+/*
     width: 1670px;
     height: 1050px;
+    */
     background-color: black;
     z-index: 10;
     -moz-opacity: 0.6;
