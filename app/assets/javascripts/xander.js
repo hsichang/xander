@@ -1,15 +1,19 @@
 // TODO: Escape button closes modals
 $(function() {
+  /*
+  // deprecate
   $("body").on("click", "#listen_experimental_btn", function(){
     // switch listen_experimental_btn with listen_player
     $("#listen_experimental_btn").addClass("hidden");
-    $("#listen_player").removeClass("hidden");
+    $("#listen_player").removeClass("hidden"); // deprecate
   })
 
+  // deprecate
   $("body").on("click", "#listen_player", function(){
     $("#listen_experimental_btn").removeClass("hidden");
     $("#listen_player").addClass("hidden");
   })
+  */
 
   $("body").on("click", ".top_menu", function(){
     var currentId = $(this).attr('id');
@@ -204,13 +208,25 @@ function showTarget(target_id) {
 }
 
 function open_listen_page () {
+  // will switch all of this messiness with simple additions to the body tag
+  // to indicate routes
+
+  $('body').addClass('music'); // keep
+
   $("#front_page_text").fadeOut('slow', function(){
     $(".front_page_text_space_hidden").show();
+
     $('.dark4').fadeIn('slow', function(){
       $(".front_page_text_space_hidden").hide();
       $('#listen_container').fadeIn('slow', function() {});
     });
+
     $("#shade").fadeIn('slow', function(){
+      // look for shade.
+      // All we need is a single screen with an animation time set in the css
+
+      // lose this -- but nested in here somewhere is the reveal for the music text
+      // which obviously needs to stay
       $("#listen-audio-player").slideDown('slow', function(){
         open_music_player();
       });
@@ -298,6 +314,8 @@ function open_music_player () {
   });
 }
 
+
+// deprecate
 function click_music_player (id) {
   // If there is a song playing (always) - remove its marker
   // find the new song
@@ -335,6 +353,9 @@ function click_music_player (id) {
   });
 };
 
+
+
+// deprecate
 function changePlayerInfo(id) {
   // Songs
   // + 1. Santori Time [Wade Laiste]
