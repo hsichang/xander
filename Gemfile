@@ -15,8 +15,9 @@ gem 'aws-s3', :require => 'aws/s3'
 
 group :development, :test do
   gem 'pry-rails'
-  gem 'pry-debugger'
-  gem 'debugger', '1.6.5'
+  # gem 'pry-debugger'
+  # gem 'debugger', '1.6.5'
+  gem 'byebug'
   gem 'annotate'
   gem 'rails-footnotes'
   gem 'capybara'
@@ -58,4 +59,4 @@ gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 # Use unicorn as the app server
 # gem 'unicorn'
 #
-ruby '1.9.3'
+ruby '2.1.2'
