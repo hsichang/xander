@@ -1,3 +1,61 @@
-// Place all the styles related to the Music controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* MUSIC */ 
+#music_container {
+  display: none;
+}
+  body.music #music_container {
+    display: inline-block;
+  }
+
+// make this class level so the video is the same way
+#music_container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.music_box_container {
+  width: 900px;
+  height: 394px;
+  background-color: rgba(0,0,0,0.8);
+  position: relative;
+  margin: 220px auto;
+  z-index: 100;
+
+  border: 1px solid #00ffd0;
+  border-radius: 5px;
+  display: block;
+}
+
+.soundcloud-player-container view-music {
+  width: 400px;
+}
+
+.axis-cover-crop{
+  display: block;
+  width: 272px;
+  height: 347px;
+  background-color: #000;
+  background: url('axis-cover-crop-2.png') no-repeat;
+  float: left;
+  margin: 24px 15px;
+}
+
+.itunes-link-container {
+position: relative;
+top: 20px;
+left: 105px;
+z-index: 100;
+}
+
+.soundcloud-player-container {
+  margin: 10px 10px;
+}
+
+
+body.music .music-modal-close-btn {
+  display: block;
+  top: -23px;
+  right: -24px;
+  cursor: pointer;
+}

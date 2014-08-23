@@ -1,0 +1,53 @@
+     
+      <div class="front_page_text_space_hidden">&nbsp;</div>
+
+      <div id="front_page_text" class = "front_page_container">
+        <div class="front_text">
+          <span class="highlight">Xander Duell.</span> Composer. Performer.
+        </div>
+
+        <!-- change this from .upcoming_events to frontpage_posts -->
+        <% unless @titles.blank? %>
+          <% @titles.each do |title| %>
+            <div class="frontpage_posts">
+
+              <div class="frontpage_title_container">
+                <span class="frontpage_title_text"><%= title.name %></span>
+              </div>
+
+              <% title.published_posts.each do |post| %>
+                <div class="frontpage_post_body_container">
+                  <span class="frontpage_post_body_text">
+                    <%= post.body %>
+                  </span>
+                </div><!-- .frontpage_post_body_container -->
+              <% end %>
+                <!-- post title -->
+
+                <!-- loop for each title post -->
+
+                <!-- loop through and post each post that is published -->
+
+
+
+
+            </div><!-- .frontpage_posts -->
+          <% end %> <!-- @titles loop -->
+        <% else %>
+          <div class="frontpage_title_container titles_empty_container">
+            <span class="frontpage_post_text"><span class="titles_empty_post_body_text highlight_text">Come back soon</span>, news, tour dates and more are on their way.</span>
+          </div>
+        <% end %>
+
+
+
+        <div class="frontpage_post_body_text contact_text_container">
+          contact: <a href="mailto:xanderduell@gmail.com" target="_top">xanderduell@gmail.com</a>
+        </div>
+      </div> 
+
+<!-- NEWS_CONTAINER -->
+ <!--        <div id="news_container" class="front_page_container3">
+            NEWS
+        </div> -->
+

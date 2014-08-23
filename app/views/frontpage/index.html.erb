@@ -1,314 +1,48 @@
-   <!-- #listen_container --><div class="dark2"></div>
-  <div class="dark3"></div>
-  <div class="dark4"></div>
+<div class="modal-background-overlay"></div>
+
 <div class="wrapper">
-    <div id="wrapper_nav">
-      <div class="logo_container">
-        <h1>XANDER DUELL</h1>
-      </div><!-- .title -->
-      <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="#" id="listen" class="top_menu underline">MUSIC</a></li>
-            <li><a href="#" id="theater" class="top_menu underline">THEATER</a></li>
-            <li><a href="#" id="film" class="top_menu underline">FILM</a></li>
-          </ul>
-        </nav>
-      </div><!-- .menu -->
-    </div><!-- #wrapper_nav -->
+  <div id="wrapper_nav">
+    <div class="logo_container">
+      <h1>XANDER DUELL</h1>
+    </div><!-- .title -->
+    <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="#" id="video" class="top_menu underline">VIDEO</a></li>
+          <li><a href="#" id="music" class="top_menu underline">MUSIC</a></li>
+          <li><a href="#" id="home" class="top_menu underline">NEWS</a></li>
+        </ul>
+      </nav>
+    </div><!-- .menu -->
+  </div><!-- #wrapper_nav -->
 
+  <div id="music_container">
+    <%= render 'music_box' %>
+  </div> <!-- #music_container -->
 
-    <div id="container">
-      <div class="image-1">
-        <!-- This div shades the first img -->
-        <div id="shade1" class="dark1">&nbsp;</div>
+  <div id="container">
+    <div class="image-1"></div>
+
+    <div class="container-pad">
+      &nbsp;
+    </div>
+
+    <%= render 'news_box' %>
+
+    <div class="image2"></div>
+
+    <div class="image-3"></div>
+
+    <div class="clear"></div><!-- .clear -->
+
+    <div class="container-pad">
         &nbsp;
-      </div>
+    </div>
+  </div><!-- #container -->
 
-          <!-- soundcloud player -->
-          <div class="soundcloud-player-container view-music">
-            <iframe width="305px" height="370" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/44456657&amp;color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-          </div><!-- .soundcloud-player-container -->
-
-          <!-- small one
-          <iframe width="325px" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/44456657&amp;color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-          -->
-
-
-
-      <div class="container-pad">
-        &nbsp;
-      </div>
-
-      <div class="front_page_text_space_hidden">&nbsp;</div>
-
-      <div id="front_page_text" class = "front_page_container">
-        <div class="front_text">
-          <span class="highlight">Xander Duell.</span> Composer. Performer.
-        </div>
-
-        <!-- change this from .upcoming_events to frontpage_posts -->
-        <% unless @titles.blank? %>
-          <% @titles.each do |title| %>
-            <div class="frontpage_posts">
-
-              <div class="frontpage_title_container">
-                <span class="frontpage_title_text"><%= title.name %></span>
-              </div>
-
-              <% title.published_posts.each do |post| %>
-                <div class="frontpage_post_body_container">
-                  <span class="frontpage_post_body_text">
-                    <%= post.body %>
-                  </span>
-                </div><!-- .frontpage_post_body_container -->
-              <% end %>
-                <!-- post title -->
-
-                <!-- loop for each title post -->
-
-                <!-- loop through and post each post that is published -->
-
-
-
-
-            </div><!-- .frontpage_posts -->
-          <% end %> <!-- @titles loop -->
-        <% else %>
-          <div class="frontpage_title_container titles_empty_container">
-            <span class="frontpage_post_text"><span class="titles_empty_post_body_text highlight_text">Come back soon</span>, news, tour dates and more are on their way.</span>
-          </div>
-        <% end %>
-
-
-
-        <div class="frontpage_post_body_text contact_text_container">
-          contact: <a href="mailto:xanderduell@gmail.com" target="_top">xanderduell@gmail.com</a>
-        </div>
-      </div>
-
-<!-- LISTEN_CONTAINER -->
-        <div id="listen_container" class = "front_page_container2">
-
-          <div class="axis-cover-container">
-            <!--            <div class="axis-cover"></div> -->
-            <div class="axis-cover-crop"></div>
-          </div>
-
-          <div class="itunes-link-container">
-
-            <a href="https://itunes.apple.com/us/album/earth-on-its-axis-single/id888363416?uo=4" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_itunes-lrg.png) no-repeat;width:110px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_itunes-lrg.svg);}"></a>
-
-
-          </div>
-
-<!--
-          <iframe wdth="100%" height="450" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155644495&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=true"></iframe>
-
-          -->
-
-          <!--
-
-        <hr class="song">
-
-          <div class="song-row row1">
-            <div class="song1-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="1" class="song2 music-btn">Beat Boxes</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row2">
-            <div class="song2-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="2" class="song1 music-btn">Santori Time</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row3">
-            <div class="song3-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="3" class="song3 music-btn">Endure Me</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row4">
-            <div class="song4-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="4" class="song4 music-btn">Emma Baby</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row5">
-            <div class="song5-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="5" class="song5 music-btn">X (I Don't Wanna Go Home)</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row6">
-            <div class="song6-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="6" class="song6 music-btn">Live &amp; Learn</a>
-            </div>
-          </div>
-          <hr class="song">
-          <div class="song-row row7">
-            <div class="song7-marker music-note">
-              &nbsp;
-            </div>
-            <div class="listen-title">
-              <a href="#" id="7" class="song7 music-btn">Joy [In Due Time]</a>
-            </div>
-          </div>
-          <hr class="song">
-          -->
-        </div> <!-- #listen_container -->
-
-
-<!-- NEWS_CONTAINER -->
-        <div id="news_container" class="front_page_container3">
-            NEWS
-        </div>
-
-<!--  CONTACT_CONTAINER -->
-        <div id="contact_container" class="front_page_container3 ">
-          <span class="email_text">xanderduell@gmail.com</a>
-        </div>
-
-<!-- IMAGE2 -->
-        <div class="image2">
-          <div id="shade" class="dark">&nbsp;</div>
-          <div id="listen-audio-player" class="dark-text">
-            <!-- AUDIO PLAYER -->
-            <%= render 'bio_copy' %>
-            
-          </div><!-- .listen-audio-player -->
-
-        </div>
-        <div class="image3">
-          <span class="image-3"></span>
-        </div>
-
-        <div class="clear"></div><!-- .clear -->
-
-<!-- THEATER MODAL -->
-        <div id="theater_container" class="theater_container">
-            <div class="theater-title">
-              For Lars Jan and Early Morning Opera
-            </div>
-            <div class="theater-list">
-              <ul>
-                <li>
-                  Psychocosmonautics (2003, 2004) – pre-recorded ambient music and live rock and vocals (MYX gallery, NYC; Philadelphia Fringe Festival, PA)
-                </li>
-                <li>
-                   Satonawall (Whitney) (2005) – prepared cello music, wrote and conducted live New Orleans-funeral dirge horn section (Whitney Museum, NYC)
-                </li>
-                <li>
-                  Lunacy Commission (2009) – sound design and led a lunacy-themed rock band (Kirk Douglas Theatre, Los Angeles)
-                </li>
-                <li>
-                  Suicide Bombing By Invitation Only (2010) - composed all music, led a string quartet with woodwinds, played piano, led a noise-rock band (Whitney Museum, NYC)
-                </li>
-                <li>
-                  Suicide Bombing By Invitation Only Reprised (June, 2011) at the Hi-Lite Gallery in Los Angeles
-                </li>
-              </ul>
-            </div>
-            <div class="theater-title">
-              For Poor Dog Group's Theatre, Los Angeles
-            </div>
-            <div class="theater-list">
-              <ul>
-                <li>
-                  Dionysia (2011) – composed and recorded music for piece, performed 2 nights at the EMPAC center in Troy, NY.  Everything You Ever Wanted – composed, recorded and performed. One night only at the Collapsable Hole
-                </li>
-              </ul>
-            </div>
-            <div class="theater-title">
-              For Mind Melt Theater Group: Christmapocalypse (2011)
-            </div>
-            <div class="theater-list">
-              <ul>
-                <li> Composed twisted versions of Christmas carols</li>
-              </ul>
-            <div class="theater-title">
-              For Kristin Marting and the HERE Gallery
-            </div>
-            <div class="theater-list">
-              <ul>
-                <li> Trade Practices (2013) – in progress now</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="theater_video_container">
-         <iframe width="480" height="360" src="http://www.youtube.com/embed/aI0jWYEDNPA?rel=0" frameborder="0" allowfullscreen></iframe>
-        </div><!-- .theater_video_container -->
-<!-- FILM MODAL -->
-
-<!-- FILM_CONTAINER -->
-        <div class="film_container">
-          <div class="filmRow">
-            <div class="filmTitle">
-              <a href="http://smallbeautifullymovingparts.com/" target="_blank">Small, Beautifully Moving Parts</a>
-            </div>
-            <div class="filmDetail film_left">
-              <div class="filmQuoteHolder">
-                <span class="filmQuote">"Effortlessly engaging ... Hollyman has a lovable screen presence."</span>
-                <br><span class="filmPromoName">-Roger Ebert</span>
-              </div>
-              <div class="filmQuoteHolder">
-                <span class="filmQuote">"Unmistakably human in its warmth, an indie road movie that runs like clockwork."</span>
-                <br><span class="filmPromoName">-IFC.com</span>
-                </div>
-              </div>
-            </div>
-            <div class="filmDetail">
-              <iframe src="http://player.vimeo.com/video/34546697" width="400" height="225" frameborder="0"></iframe>
-            </div>
-            <div class="filmSpacer">
-              <hr>
-            </div>
-            <div class="filmRow space-bottom-75">
-              <div class="filmTitle">
-                <a href="http://futurestates.tv/episodes/hollow" target="_blank">Hollow</a>
-              </div>
-              <div class="filmDetail filmQuote film_left">
-                "The web is no longer secure, but Neurolock (TM) can encrypt data using the human brain.  Iris struggles to choose between unemployment and a job as a "neuro-messenger," a career with unwanted side effects."
-              </div>
-            </div>
-            <div class="filmDetail spaced-bottom-75">
-              <iframe width="400" height="225" src="http://www.youtube.com/embed/ts1blAppSBY?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-        <div class="container-pad">
-            &nbsp;
-        </div>
-    </div><!-- #container -->
-
-    <footer>
-        <span class="footer-highlight">COPYRIGHT 2013. XANDERDUELL.COM</span>
-    </footer>
+  <footer>
+    <span class="footer-highlight">COPYRIGHT <%= Time.zone.now.year %>. XANDERDUELL.COM</span>
+  </footer>
 </div><!-- #wrapper -->
 
 

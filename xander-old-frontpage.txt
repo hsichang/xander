@@ -1,0 +1,98 @@
+
+line 98
+
+<!-- THEATER MODAL -->
+        <div id="theater_container" class="theater_container">
+            <div class="theater-title">
+              For Lars Jan and Early Morning Opera
+            </div>
+            <div class="theater-list">
+              <ul>
+                <li>
+                  Psychocosmonautics (2003, 2004) – pre-recorded ambient music and live rock and vocals (MYX gallery, NYC; Philadelphia Fringe Festival, PA)
+                </li>
+                <li>
+                   Satonawall (Whitney) (2005) – prepared cello music, wrote and conducted live New Orleans-funeral dirge horn section (Whitney Museum, NYC)
+                </li>
+                <li>
+                  Lunacy Commission (2009) – sound design and led a lunacy-themed rock band (Kirk Douglas Theatre, Los Angeles)
+                </li>
+                <li>
+                  Suicide Bombing By Invitation Only (2010) - composed all music, led a string quartet with woodwinds, played piano, led a noise-rock band (Whitney Museum, NYC)
+                </li>
+                <li>
+                  Suicide Bombing By Invitation Only Reprised (June, 2011) at the Hi-Lite Gallery in Los Angeles
+                </li>
+              </ul>
+            </div>
+            <div class="theater-title">
+              For Poor Dog Group's Theatre, Los Angeles
+            </div>
+            <div class="theater-list">
+              <ul>
+                <li>
+                  Dionysia (2011) – composed and recorded music for piece, performed 2 nights at the EMPAC center in Troy, NY.  Everything You Ever Wanted – composed, recorded and performed. One night only at the Collapsable Hole
+                </li>
+              </ul>
+            </div>
+            <div class="theater-title">
+              For Mind Melt Theater Group: Christmapocalypse (2011)
+            </div>
+            <div class="theater-list">
+              <ul>
+                <li> Composed twisted versions of Christmas carols</li>
+              </ul>
+            <div class="theater-title">
+              For Kristin Marting and the HERE Gallery
+            </div>
+            <div class="theater-list">
+              <ul>
+                <li> Trade Practices (2013) – in progress now</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="theater_video_container">
+         <iframe width="480" height="360" src="http://www.youtube.com/embed/aI0jWYEDNPA?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div><!-- .theater_video_container -->
+<!-- FILM MODAL -->
+
+<!-- FILM_CONTAINER -->
+        <div class="film_container">
+          <div class="filmRow">
+            <div class="filmTitle">
+              <a href="http://smallbeautifullymovingparts.com/" target="_blank">Small, Beautifully Moving Parts</a>
+            </div>
+            <div class="filmDetail film_left">
+              <div class="filmQuoteHolder">
+                <span class="filmQuote">"Effortlessly engaging ... Hollyman has a lovable screen presence."</span>
+                <br><span class="filmPromoName">-Roger Ebert</span>
+              </div>
+              <div class="filmQuoteHolder">
+                <span class="filmQuote">"Unmistakably human in its warmth, an indie road movie that runs like clockwork."</span>
+                <br><span class="filmPromoName">-IFC.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="filmDetail">
+              <iframe src="http://player.vimeo.com/video/34546697" width="400" height="225" frameborder="0"></iframe>
+            </div>
+            <div class="filmSpacer">
+              <hr>
+            </div>
+            <div class="filmRow space-bottom-75">
+              <div class="filmTitle">
+                <a href="http://futurestates.tv/episodes/hollow" target="_blank">Hollow</a>
+              </div>
+              <div class="filmDetail filmQuote film_left">
+                "The web is no longer secure, but Neurolock (TM) can encrypt data using the human brain.  Iris struggles to choose between unemployment and a job as a "neuro-messenger," a career with unwanted side effects."
+              </div>
+            </div>
+            <div class="filmDetail spaced-bottom-75">
+              <iframe width="400" height="225" src="http://www.youtube.com/embed/ts1blAppSBY?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+

@@ -1,8 +1,7 @@
 $highlight_color: #00ffd0;
 
-
-.group {
-  float: left;
+.clear {
+  clear: both;
 }
 
 .text_left {
@@ -31,3 +30,27 @@ $highlight_color: #00ffd0;
   float:left;
 }
 
+body .music-modal-close-btn {
+  display: none;
+}
+
+.modal-close-btn {
+  font-family: "brandon-grotesque", helvetica;
+  font-family: helvetica;
+  font-size: 30px;
+  font-weight: 800;
+  color: #00ffd0;
+  border: 4px solid #00FFCF;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 34px;
+  padding: 5px;
+  background-color: #000;
+}
+
+.modal-btn-container {
+  width: 100%;
+}

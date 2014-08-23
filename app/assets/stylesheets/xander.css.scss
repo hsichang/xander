@@ -2,6 +2,10 @@
   display: none;
 }
 
+.left-container {
+  float: left;
+}
+
 footer {
   background-color: #ffffff;
   min-height: 110px;
@@ -34,7 +38,7 @@ footer {
   float: left;
   margin-top: -2px;
   margin-right: -4px;
-  background-image:url('front_page_img_1.jpg');
+  background: url('front_page_img_1.jpg') no-repeat;
 }
 
 .image2 {
@@ -44,21 +48,16 @@ footer {
   float: left;
   margin: 0 30px 0 0;
   padding: 0;
-  background-image:url('front_page_img_2.jpg');
+  background: url('front_page_img_2.jpg') no-repeat;
+  display: block;
 }
-
-.image3 {
-  width: 390px;
-  float: left;
-}
-
 
 .image-3 {
   width: 390px;
   height: 722px;
   display: block;
-
-  background: url('front_page_img_3.jpg');
+  float: left;
+  background: url('front_page_img_3.jpg') no-repeat;
 }
 
 .front_page_container2 {
@@ -72,28 +71,28 @@ footer {
   margin-right: 20px;
   display: none;
 }
-.front_page_container3 {
-  width: 335px !important;
-  float: left;
-  color: #cacaca;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 400;
-  margin-right: 20px;
-  display: none;
-}
+// .front_page_container3 {
+//   width: 335px !important;
+//   float: left;
+//   color: #cacaca;
+//   font-family: "brandon-grotesque",sans-serif;
+//   letter-spacing: 1px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   margin-right: 20px;
+//   display: none;
+// }
 
-.front_page_container3 {
-  width: 355px !important;
-  float: left;
-  color: #cacaca;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 234px 0 0 0;
-}
+// .front_page_container3 {
+//   width: 355px !important;
+//   float: left;
+//   color: #cacaca;
+//   font-family: "brandon-grotesque",sans-serif;
+//   letter-spacing: 1px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   margin: 234px 0 0 0;
+// }
 
 .front_page_text_space_hidden {
   width: 335px;
@@ -138,7 +137,6 @@ nav ul li a{
   text-decoration: none;
   color: #000000;
   font-weight: 800;
-  /*color: yellow;*/
 }
 
 nav ul li a:visited {
@@ -214,28 +212,10 @@ h3 {
   padding: 20px;
 }
 
-.experimental_text {
-  display: none;
-}
-
 .wade_text {
   display: none;
 }
 
-.dark4 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 1670px;
-    height: 1050px;
-    background-color: black;
-    z-index: 10;
-    -moz-opacity: 0.6;
-    opacity:.60;
-    filter: alpha(opacity=60);
-}
 
 .listen_album_row {
   background-color: #fff;
@@ -243,14 +223,6 @@ h3 {
   border-radius: 5px;
 }
 
-#listen_container {
-  float: left;
-  padding-right: 28px;
-  z-index: 50;
-  background-color: #000;
-  height: 722px;
-  position: relative;
-}
 
 .experimental_title {
   padding: 0 0 0 10px;
@@ -327,25 +299,6 @@ h3 {
   width: 440px !important;
 }
 
-#listen_container a {
-  color: #00ffd0;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: .1em;
-  font-size: .9em;
-  margin: 0 0 .1em 0;
-  text-decoration: none;
-  display: inline-block;
-}
-
-#listen_container a:hover {
-  color: #cacaca;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: .1em;
-  font-size: .9em;
-  text-decoration: none;
-  border-bottom: 3px solid #cacaca;
-}
-
 
 #listen_menu a {
   color: #00ffd0;
@@ -412,89 +365,6 @@ h3 {
   margin-top: 25px;
 }
 
-.audio {
-  width: 300px;
-}
-
-#audioplayer{
-  width: 450px !important;
-  margin: 20px 0 0 0;
-}
-.audiojs {
-  /*the time side*/
-  width: 346px !important;
-}
-.scrubber {
-  width: 155px !important;
-}
-
-.dark {
-  width: 100%;
-  min-height: 722px;
-  z-index: 10;
-  background-color: #000000;
-  opacity: .5;
-  display: none;
-}
-
-.dark-text {
-  width: 100%;
-  z-index: 20;
-  color: white;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: #cacaca;
-  margin: 0 0 10px 0;
-}
-
-#listen-audio-player {
-  position: relative;
-  top: -50.3em;
-  display: none;
-}
-
-.listen-audio-player-bigo {
-  z-index: 30;
-  position: relative;
-  top: -50.3em;
-  /*display: none;*/
-  font-size: 40px;
-  font-weight: 800;
-  font-family: arial;
-  color: white;
-}
-
-.audio-player-wrapper {
-  width: 346px !important;
-  background-color: rgba(255, 255, 255, 0.73);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 24px auto 20px auto;
-  opacity: .85;
-}
-
-.music-note {
-  min-width: 25px;
-  max-width: 25px;
-  min-height: 25px;
-  margin: 12px 10px 0 0;
-  float: left;
-}
-
-.song {
-  width: 100%;
-  z-index: 100;
-  color: white;
-  font-family: "brandon-grotesque",sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: #00ffd0;
-}
-
-.not-playing {
-  padding: 0 0 0 35px;
-}
 hr {
   display: block;
   height: 2px;
@@ -566,20 +436,6 @@ nav ul li a:hover{
 
 /* THEATER */
 
-.dark2 {
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 1670px;
-    height: 1050px;
-    background-color: black;
-    z-index: 10;
-    -moz-opacity: 0.6;
-    opacity:.60;
-    filter: alpha(opacity=60);
-}
-
 .theater_container {
   background-color: rgba(0,0,0,0.8);
   border: 1px solid #00ffd0;
@@ -631,19 +487,6 @@ nav ul li a:hover{
 
 /* FILM */
 
-.dark3 {
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 1670px;
-    height: 1050px;
-    background-color: black;
-    z-index: 50;
-    -moz-opacity: 0.6;
-    opacity:.60;
-    filter: alpha(opacity=60);
-}
 
 .film_container {
   width: 600px;
@@ -745,46 +588,31 @@ nav ul li a:hover{
 }
 
 
-/* music styles */
 
-body.music .view-music {
+/* new body stuff */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body .modal-background-overlay{
+  background-color: rgba(0,0,0,0.0);
+}
+  body.music .modal-background-overlay,
+  body.video .modal-background-overlay   {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+.modal-background-overlay {
   display: block;
-}
-  .view-music {
-    display: none;
-  }
-
-.soundcloud-player-container {
   position: absolute;
- /* top: 130px; */
-  top: 170px;
-  left: 0px;
-  z-index: 100;
-  opacity: .83;
-}
-
-.axis-cover-container {
-  margin-top: 12px;
-}
-  .axis-cover {
-    display: block;
-    width: 325px;
-    height: 470px;
-    background-color #000;
-    background: url('axis-cover.png');
-  }
-
-  .axis-cover-crop {
-    display: block;
-    width: 325px;
-    height: 349px;
-    background-color #000;
-    background: url('axis-cover-crop.png');
-  }
-
-.itunes-link-container {
-  position: relative;
-  top: 20px;
-  left: 105px;
-  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1670px;
+  height: 1050px;
+  background-color: rgba(0,0,0,0.0);
+  z-index: 10;
+  -webkit-transition:  1s; /* For Safari 3.1 to 6.0 */
+  transition:  1s;
 }
