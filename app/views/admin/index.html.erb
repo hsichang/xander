@@ -1,68 +1,35 @@
-<div class="admin_header_container">
-  <div class="text_left admin-panel group">
-    <span class="admin_header_text">Administrator control panel</span>
-  </div>
-  <div class="text_right admin-panel admin_panel_button_container group">
-    <%= link_to 'LOGOUT', logout_path, :class => "admin_header_button" %>
-  </div>
-  <div class="clear"></div>
+<div class="admin-header">
+  Admin control panel
 </div>
 
-<div class="admin_body_container">
-
-  <div class="admin_control_panel_flash_message_container">
-    <!-- IF FLASH MAKE A MESSAGE HERE -->
-
+<div class="admin-input">
+  <div class="current-text">
+    Current text:
   </div>
 
-  <% if this_user.superuser? %>
-    <div class="admin_control_panel_superuser_dashboard_container">
+  <div>
+    <%= @blog.billboard_text.gsub(/\n/, '<br />').html_safe unless @blog.nil? %>
+    <%= "Empty" if @blog.nil? %>
+  </div>
 
-      <!--  "hello i am an active superuser" -->
+  <div class="admin-new-text">
+    New text:
+  </div>
 
+  <div>
+    <%= form_tag (blog_path) do %>
 
-    </div>
-  <% end %>
-
-
-  <div class="admin_control_panel_dashboard_container">
-    <div class="admin_control_panel_title_container">
-      <span class="admin_control_panel_text group">Frontpage post dashboard</span>
-      <span class="admin_control_panel_options_text group">
-        |
-        <%= link_to "ADD A NEW HEADLINE", title_new_path %>
-        |
-        <!-- change this to post not posts and move the views -->
-        <%= link_to "ADD A NEW POST", post_new_path %>
-      </span>
-      <div class="clear"></div>
+    <div>
+      <%= text_area_tag 'body', nil, :rows => 10, :cols => 39 %>
     </div>
 
-
-    <div class="admin_dashboard_frontpage">
-     PRIORITY | HEADLINE
+    <div class="admin-submit">
+      <%= submit_tag 'Update text', :class => "submit-btn" %>
     </div>
-
-    <!-- LOOP FOR EACH TITLE -->
-    <% unless @titles.blank? %>
-      <% @titles.each do |title| %>
-        <div class="title_name"><%= title.name %></title>
-        <div class="admin_new_post_prompt"><%= link_to "Add a new sub post", post_new_path, :title_id => title.id %></div>
-        <!-- LOOP FOR EACH POST -->
-        <% title.posts.each do |post| %>
-
-
-        <% end %>
-
-      <% end %>
-
-    <% else %>
-
-      NO TITLES
-
     <% end %>
-
   </div>
 
-
+  <div class="admin-logout">
+    <%= link_to 'logout of admin page', logout_path, :class => "logout-btn" %>
+  </div>
 </div>

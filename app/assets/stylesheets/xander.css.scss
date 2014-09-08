@@ -13,7 +13,6 @@ footer {
   font-size: 20px;
   color: #000000;
   width: 800px;
-  margin: auto;
   padding: 26px 0 0 0;
   color: #cacaca;
   font-weight: 400;
@@ -102,10 +101,9 @@ footer {
 }
 
 .menu {
-  position: absolute;
-  top: 2.06em;
-  left: 40.4em;
-  float: left;
+  position: relative;
+  top: 30px;
+  left: 20px;
   color: black;
   z-index: 90;
   width: 1000px;
@@ -609,7 +607,7 @@ body .modal-background-overlay{
   top: 0;
   left: 0;
   bottom: 0;
-  width: 1670px;
+  width: 100%;
   height: 1050px;
   background-color: rgba(0,0,0,0.0);
   z-index: 10;
