@@ -6,10 +6,10 @@
     display: inline-block;
   }
 
-// make this class level so the video is the same way
 #music_container {
   position: absolute;
   width: 100%;
+  max-width: 1670px;
   top: 0;
   left: 0;
 }

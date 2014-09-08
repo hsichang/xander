@@ -11,29 +11,11 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <%#= favicon_link_tag %>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <script>
-      audiojs.events.ready(function() {
-        var ajso = audiojs.createAll();
-         $('.audiojs .play-pause').live('click', function(){
-            var thisIndex = $(this).parents('.audiojs').index('.audiojs');
-            $.each(ajso, function(index,val){
-                if ( index != thisIndex && ajso[index].playing ) ajso[index].pause();
-            });
-        });
-      });
-    </script>
-
-    <script>
-      audiojs.events.ready(function() {
-        var as = audiojs.createAll();
-      });
-    </script>
-
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="main_container">
+        <%= yield %>
+    </div>
 </body>
 </html>
 

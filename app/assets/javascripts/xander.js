@@ -45,7 +45,6 @@ $(document).ready(function() {
       var self = this;
 
       self.$body.attr('class', route);
-      console.log("body class : " + self.$body.attr('class'))
     },
 
   };  /* end of Router.prototype */
