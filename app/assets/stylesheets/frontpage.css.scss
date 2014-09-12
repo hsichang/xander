@@ -143,3 +143,19 @@ body {
   top: 780px;
   z-index: 10000;
 }
+
+.frontpage_itunes_link {
+  margin: 0 0 3px 10px;
+  -webkit-transition-duration: .3s; /* Safari */
+  transition-duration: .3s;
+  -webkit-filter: invert(.8);
+  cursor: pointer;
+}
+
+.frontpage_itunes_link:hover {
+  margin: 0 0 3px 10px;
+  -webkit-transition-duration: .3s; /* Safari */
+  transition-duration: .3s;
+  -webkit-filter: invert(1);
+  cursor: pointer;
+}
