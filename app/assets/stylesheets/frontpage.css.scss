@@ -52,6 +52,16 @@ body {
   letter-spacing: 2px;
 }
 
+.frontpage_post_text {
+  font-family: "brandon-grotesque", sans-serif;
+  // color: #FAFAFA;
+  color: #EAEAEA;
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
 .frontpage_post_body_container {
   margin-bottom: 20px;
 }
@@ -86,3 +96,50 @@ body {
   top: 836px;
 }
 
+@mixin sprite($url) {
+  background: url($url) left top no-repeat;
+  background-size: 50px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;  
+  -webkit-transition-duration: .3s; /* Safari */
+  transition-duration: .3s;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+@mixin sprite_hover {
+  -webkit-filter: invert(0.7);
+}
+
+.sprite_facebook {
+  @include sprite('facebook.png');
+  margin-left: 0px;
+}
+.sprite_facebook:hover {
+  @include sprite('facebook.png');
+  @include sprite_hover;
+  margin-left: 0px;
+}
+
+.sprite_twitter {
+  @include sprite('twitter.png');
+}
+.sprite_twitter:hover {
+  @include sprite('twitter.png');
+  @include sprite_hover;
+}
+
+.sprite_instagram {
+  @include sprite('instagram.png');
+}
+.sprite_instagram:hover {
+  @include sprite('instagram.png');
+  @include sprite_hover;
+}
+
+.social_container {
+  position: absolute;
+  top: 780px;
+  z-index: 10000;
+}
